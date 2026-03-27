@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payal | 3D Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<div id="scene"></div>
+
+<div class="overlay">
+  <h1>Hi, I'm <span>Payal</span></h1>
+  <p>Full Stack Developer - ML Enthusiast</p>
+  <button onclick="scrollToProjects()">Explore Projects</button>
+</div>
+
+<main class="content">
+  <section class="skills" id="skills">
+    <div class="section-heading">
+      <p class="eyebrow">Core Skills</p>
+      <h2>Tools and Technologies I Use to Build Modern Digital Products</h2>
+      <p class="section-copy">
+        My stack covers frontend interfaces, backend systems, databases, and
+        machine learning workflows for real-world projects.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h3>Frontend</h3>
+        <ul class="skill-list">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS3</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a></li>
+          <li><a href="https://react.dev/" target="_blank" rel="noopener noreferrer">React</a></li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <h3>Backend</h3>
+        <ul class="skill-list">
+          <li><a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer">Node.js</a></li>
+          <li><a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">Express</a></li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <h3>Database</h3>
+        <ul class="skill-list">
+          <li><a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer">MongoDB</a></li>
+          <li><a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">MySQL</a></li>
+        </ul>
+      </article>
+
+      <article class="skill-card">
+        <h3>ML and Tools</h3>
+        <ul class="skill-list">
+          <li><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a></li>
+          <li><a href="https://numpy.org/" target="_blank" rel="noopener noreferrer">NumPy</a></li>
+          <li><a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer">Pandas</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">Git and GitHub</a></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="certifications" id="certifications">
+    <div class="section-heading">
+      <p class="eyebrow">Certifications</p>
+      <h2>Credentials That Back Up My Learning and Practical Skills</h2>
+      <p class="section-copy">
+        Verified certifications that reflect my interest in responsible AI,
+        continuous learning, and hands-on technical growth.
+      </p>
+    </div>
+
+    <div class="certification-grid">
+      <article class="certification-card">
+        <span class="certification-badge">Google Cloud</span>
+        <h3>Responsible AI: Applying AI Principles with Google Cloud</h3>
+        <p class="certification-meta">Google Cloud Training and Coursera | March 15, 2025</p>
+        <p>
+          Completed a course focused on responsible AI principles, ethical model
+          use, and practical ways to apply AI thoughtfully in real products.
+        </p>
+        <a
+          class="certification-link"
+          href="https://www.coursera.org/account/accomplishments/certificate/IALBMX6SAJZ5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Certificate
+        </a>
+      </article>
+
+      <article class="certification-card">
+        <span class="certification-badge">Coursera</span>
+        <h3>Introduction to Generative AI</h3>
+        <p class="certification-meta">Coursera | 2025</p>
+        <p>
+          Successfully completed a course focused on generative AI concepts,
+          core ideas, and real-world applications.
+        </p>
+        <a
+          class="certification-link"
+          href="https://www.coursera.org/account/accomplishments/verify/HRHYE0URBL0P"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Certificate
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="section-heading">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Projects That Blend Code, Design, and Real Problem Solving</h2>
+      <p class="section-copy">
+        A few builds that show how I approach web development, machine learning,
+        and product-focused engineering.
+      </p>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card">
+        <span class="project-tag">Full Stack</span>
+        <h3>HabitFlow</h3>
+        <p>
+          Habit Flow is a clean, intuitive productivity app designed to help users build and maintain positive daily routines
+        </p>
+        <ul class="project-stack">
+          <li>Frontend: React + Tailwind css</li>
+          <li>Backend: FastAPI + MongoDB</li>
+          <li>Deployment: Vercel (frontend) & Railway (backend)</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://habitflow-nu.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/payal225/habitflow" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <span class="project-tag">Full Stack</span>
+        <h3>Mini ERP System</h3>
+        <p>
+Full ERP controls remain intact for administrators, including employee management, payroll, task assignment, and leave approvals.        </p>
+        <ul class="project-stack">
+          <li>Frontend: React + Bootstrap</li>
+          <li>Backend: FastAPI + MySQL</li>
+          <li>Deployment: Vercel (frontend) & Render (backend)</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/payal225/habitflow" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/payal225/erp" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <span class="project-tag">Frontend</span>
+        <h3>3D Portfolio Experience</h3>
+        <p>
+          A cinematic portfolio interface built with layered motion, immersive
+          visuals, and smooth interactions to showcase projects in a memorable way.
+        </p>
+        <ul class="project-stack">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>javascript</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="connect" id="connect">
+    <div class="section-heading">
+      <p class="eyebrow">Connect With Me</p>
+      <h2>Let’s Build, Collaborate, or Simply Stay in Touch</h2>
+      <p class="section-copy">
+        You can find me on the platforms below for projects, networking, and
+        tech conversations.
+      </p>
+    </div>
+
+    <div class="connect-grid">
+      <a class="connect-card" href="https://github.com/payal225" target="_blank" rel="noopener noreferrer">
+        <span class="connect-label">GitHub</span>
+        <h3>payal225</h3>
+        <p>Explore my code, repositories, and ongoing development work.</p>
+      </a>
+
+      <a class="connect-card" href="https://www.linkedin.com/in/payal-ghosh-1a7345359?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+        <span class="connect-label">LinkedIn</span>
+        <h3>Payal Ghosh</h3>
+        <p>Connect professionally, view my profile, and follow my career journey.</p>
+      </a>
+
+      <a class="connect-card" href="https://x.com/PGhosh84956" target="_blank" rel="noopener noreferrer">
+        <span class="connect-label">X</span>
+        <h3>@PGhosh84956</h3>
+        <p>Follow my updates, thoughts, and conversations around technology.</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+
+<script>
+function scrollToProjects() {
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
