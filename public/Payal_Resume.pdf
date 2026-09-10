@@ -1,0 +1,103 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1240 >>
+stream
+BT
+/F2 18 Tf
+50 740 Td
+(PAYAL GHOSH) Tj
+/F1 10 Tf
+0 -18 Td
+(Kolkata, West Bengal, India | +91 62892 58651 | payalghosh90956@gmail.com) Tj
+0 -14 Td
+(linkedin.com/in/payal-ghosh-1a7345359 | github.com/payal225) Tj
+/F2 12 Tf
+0 -24 Td
+(CAREER OBJECTIVE) Tj
+/F1 10 Tf
+0 -14 Td
+(Enthusiastic B.Tech CSE student with hands-on experience building full-stack web applications) Tj
+0 -13 Td
+(using React, JavaScript, Node.js, and Python. Seeking an entry-level Web Developer role.) Tj
+/F2 12 Tf
+0 -22 Td
+(EDUCATION) Tj
+/F1 10 Tf
+0 -14 Td
+(B.Tech, Computer Science & Engineering - Sister Nivedita University, Kolkata [2023 - 2027]) Tj
+0 -13 Td
+(CGPA: 8.58 / 10 | Coursework: DSA, DBMS, Web Technologies, Operating Systems, OOP) Tj
+/F2 12 Tf
+0 -22 Td
+(SKILLS) Tj
+/F1 10 Tf
+0 -14 Td
+(Languages: HTML5, CSS3, JavaScript [ES6+], Python | Frameworks: React.js, Tailwind, Bootstrap) Tj
+0 -13 Td
+(Backend: Node.js, Express.js, REST APIs | Databases: MySQL, MongoDB) Tj
+0 -13 Td
+(Tools: Git, GitHub, VS Code, Vite, Vercel, Netlify, Postman | Concepts: Responsive Design, RBAC, CRUD) Tj
+/F2 12 Tf
+0 -22 Td
+(PROJECTS) Tj
+/F1 10 Tf
+0 -14 Td
+(1. Habit Flow - Smart Habit Tracking Web App [React, Node.js, Express, MongoDB, Vercel] - 2025) Tj
+0 -13 Td
+(   - Habit tracking with streak analytics dashboard, reminder system, and mobile-first UI.) Tj
+0 -16 Td
+(2. Mini ERP - Employee Management System [React, Express.js, MySQL, Vercel] - 2026) Tj
+0 -13 Td
+(   - Role-based dashboard for employee records, payroll, leave requests, and attendance.) Tj
+0 -16 Td
+(3. TripNest - Role-Based Tourism Web Application [React, Vite, CSS, Vercel] - 2026) Tj
+0 -13 Td
+(   - Dynamic destination browsing and multi-role dashboards [traveller, admin, host].) Tj
+/F2 12 Tf
+0 -22 Td
+(CERTIFICATIONS [Google Cloud / Coursera]) Tj
+/F1 10 Tf
+0 -14 Td
+(- Responsible AI: Applying AI Principles with Google Cloud [March 2025]) Tj
+0 -13 Td
+(- Introduction to Generative AI | Introduction to Generative AI Learning Path) Tj
+0 -13 Td
+(- Introduction to Large Language Models) Tj
+/F2 12 Tf
+0 -22 Td
+(LANGUAGES) Tj
+/F1 10 Tf
+0 -14 Td
+(Bengali [Native] | Hindi [Fluent] | English [Professional Proficiency]) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000254 00000 n 
+0000001555 00000 n 
+0000001642 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1734
+%%EOF

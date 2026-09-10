@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payal Ghosh - CV</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cush/cmu-serif@1.0.0/cmu-serif.css">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 18mm 18mm 18mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'CMU Serif', 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
+      font-size: 10.5pt;
+      line-height: 1.35;
+      color: #000;
+      background: #525659;
+      margin: 0;
+      padding: 24px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .cv-toolbar {
+      position: fixed;
+      top: 12px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+    }
+    .cv-btn {
+      padding: 8px 16px;
+      background: #0077b6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.2s;
+    }
+    .cv-btn:hover {
+      background: #023e8a;
+    }
+    .page-sheet {
+      background: #fff;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 24px auto;
+      padding: 20mm 20mm 20mm 20mm;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .header-name {
+      font-size: 20pt;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      margin: 0 0 4pt;
+    }
+    .header-meta {
+      font-size: 9.8pt;
+      margin: 0 0 3pt;
+      color: #111;
+    }
+    .header-links {
+      font-size: 9.8pt;
+      margin: 0 0 12pt;
+    }
+    .header-links a, .header-meta a {
+      color: #000;
+      text-decoration: none;
+    }
+    .section-title {
+      font-size: 10.8pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 0.75pt solid #000;
+      padding-bottom: 1.5pt;
+      margin-top: 13pt;
+      margin-bottom: 6pt;
+    }
+    p.objective-text {
+      margin: 0;
+      text-align: justify;
+      font-size: 10.2pt;
+      line-height: 1.35;
+    }
+    .row-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+    }
+    .font-bold {
+      font-weight: bold;
+    }
+    .font-italic {
+      font-style: italic;
+    }
+    .edu-title {
+      font-size: 10.4pt;
+      font-weight: bold;
+    }
+    .edu-inst {
+      font-style: italic;
+      margin-top: 1pt;
+      margin-bottom: 3pt;
+      font-size: 10.2pt;
+    }
+    ul.cv-list {
+      margin: 2pt 0 6pt 16pt;
+      padding: 0;
+      list-style-type: disc;
+    }
+    ul.cv-list li {
+      margin-bottom: 2.5pt;
+      font-size: 10pt;
+      line-height: 1.35;
+      text-align: justify;
+    }
+    .skills-grid-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2pt;
+      margin-bottom: 4pt;
+    }
+    .skills-grid-table td {
+      padding: 1.5pt 0;
+      vertical-align: top;
+      font-size: 10.2pt;
+      line-height: 1.3;
+    }
+    .skills-grid-table td.skill-lbl {
+      font-weight: bold;
+      width: 175pt;
+      white-space: nowrap;
+    }
+    .project-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 8pt;
+      margin-bottom: 2pt;
+    }
+    .proj-title {
+      font-weight: bold;
+      font-size: 10.4pt;
+    }
+    .proj-demo {
+      font-style: italic;
+      color: #000;
+      text-decoration: underline;
+      font-weight: normal;
+      margin-left: 14pt;
+    }
+    .proj-year {
+      font-style: italic;
+      font-size: 10pt;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .cv-toolbar {
+        display: none !important;
+      }
+      .page-sheet {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: auto;
+        page-break-after: always;
+      }
+      .page-sheet:last-child {
+        page-break-after: avoid;
+      }
+    }
+    @media (max-width: 840px) {
+      .page-sheet {
+        width: 95%;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-toolbar">
+    <button onclick="window.print()" class="cv-btn">🖨️ Print / Save as PDF</button>
+    <a href="/Payal_Resume.pdf" download="Payal_Ghosh_CV.pdf" class="cv-btn">📥 Download PDF</a>
+    <a href="/" class="cv-btn" style="background:#333;">← Back to Portfolio</a>
+  </div>
+
+  <!-- PAGE 1 -->
+  <div class="page-sheet">
+    <div class="text-center">
+      <div class="header-name">Payal Ghosh</div>
+      <div class="header-meta">
+        Kolkata, West Bengal, India &nbsp;|&nbsp; +91 62892 58651 &nbsp;|&nbsp; payalghosh90956@gmail.com
+      </div>
+      <div class="header-links">
+        <a href="https://linkedin.com/in/payal-ghosh-1a7345359" target="_blank">linkedin.com/in/payal-ghosh-1a7345359</a> &nbsp;|&nbsp;
+        <a href="https://github.com/payal225" target="_blank">github.com/payal225</a>
+      </div>
+    </div>
+
+    <!-- CAREER OBJECTIVE -->
+    <div class="section-title">CAREER OBJECTIVE</div>
+    <p class="objective-text">
+      Enthusiastic B.Tech Computer Science student with hands-on experience building full-stack web applications using React, JavaScript, and Python. Passionate about creating clean, responsive, and user-friendly interfaces. Seeking an entry-level Web Developer role where I can contribute meaningfully and grow as a developer.
+    </p>
+
+    <!-- EDUCATION -->
+    <div class="section-title">EDUCATION</div>
+    <div class="row-flex">
+      <span class="edu-title">Bachelor of Technology, Computer Science & Engineering</span>
+      <span class="font-italic">2023 – 2027</span>
+    </div>
+    <div class="edu-inst">Sister Nivedita University, Kolkata</div>
+    <ul class="cv-list">
+      <li>CGPA: 6.68 / 10</li>
+      <li>Relevant coursework: Data Structures & Algorithms, Database Management Systems, Web Technologies, Operating Systems, Object-Oriented Programming</li>
+    </ul>
+
+    <!-- SKILLS -->
+    <div class="section-title">SKILLS</div>
+    <table class="skills-grid-table">
+      <tr>
+        <td class="skill-lbl">Languages:</td>
+        <td>HTML5, CSS3, JavaScript (ES6+), Python</td>
+      </tr>
+      <tr>
+        <td class="skill-lbl">Frameworks & Libraries:</td>
+        <td>React.js,Tailwind,Bootstrap</td>
+      </tr>
+      <tr>
+        <td class="skill-lbl">Backend:</td>
+        <td>Node.js, Express.js, REST APIs</td>
+      </tr>
+      <tr>
+        <td class="skill-lbl">Databases:</td>
+        <td>MySQL, MongoDB</td>
+      </tr>
+      <tr>
+        <td class="skill-lbl">Tools & Platforms:</td>
+        <td>Git, GitHub, VS Code, Vite, Vercel, Netlify, Postman</td>
+      </tr>
+      <tr>
+        <td class="skill-lbl">Concepts:</td>
+        <td>Responsive Design, State Management, CRUD Operations, Role-Based Access Control</td>
+      </tr>
+      <tr>
+        <td class="skill-lbl">Soft Skills:</td>
+        <td>Problem Solving, Attention to Detail, Quick Learner, Teamwork</td>
+      </tr>
+    </table>
+
+    <!-- PROJECTS -->
+    <div class="section-title">PROJECTS</div>
+
+    <!-- Habit Flow -->
+    <div class="project-header-row" style="margin-top: 4pt;">
+      <div>
+        <span class="proj-title">Habit Flow – Smart Habit Tracking Web App</span>
+        <a href="https://habitflow-nu.vercel.app/" target="_blank" class="proj-demo">Live Demo</a>
+      </div>
+      <span class="proj-year">2025</span>
+    </div>
+    <ul class="cv-list">
+      <li>Designed and developed a full-stack habit tracking application enabling users to create, edit, and monitor personalised daily habits with streak tracking and a visual analytics dashboard.</li>
+      <li>Built a responsive UI in React with real-time progress indicators and a reminder system, improving user engagement and habit consistency.</li>
+      <li>Deployed on Vercel with a clean mobile-first design; focused on minimal UI and intuitive UX to encourage long-term habit formation.</li>
+      <li><strong>Tech Stack:</strong> HTML, CSS, JavaScript, React, Node.js/Express, MongoDB/Firebase, Vercel</li>
+    </ul>
+
+    <!-- Mini ERP -->
+    <div class="project-header-row">
+      <div>
+        <span class="proj-title">Mini ERP – Employee Management System</span>
+        <a href="https://habitflow-nu.vercel.app/" target="_blank" class="proj-demo">Live Demo</a>
+      </div>
+      <span class="proj-year">2026</span>
+    </div>
+    <ul class="cv-list">
+      <li>Built a full-stack ERP system to manage employee records, attendance, leave requests, payroll, and task assignments through a structured dashboard.</li>
+      <li>Developed RESTful APIs with Express.js and integrated MySQL for reliable relational data management across multiple modules.</li>
+      <li>Implemented role-based views and a clean, organised interface to streamline team management workflows.</li>
+      <li><strong>Tech Stack:</strong> React, Express.js, MySQL, Vercel</li>
+    </ul>
+
+    <!-- TripNest (Part 1 on page 1) -->
+    <div class="project-header-row">
+      <div>
+        <span class="proj-title">TripNest – Role-Based Tourism Web Application</span>
+        <a href="https://habitflow-nu.vercel.app/" target="_blank" class="proj-demo">Live Demo</a>
+      </div>
+      <span class="proj-year">2026</span>
+    </div>
+    <ul class="cv-list" style="margin-bottom: 0;">
+      <li>Developed a full-stack tourism web application with role-based access control, allowing different user types (e.g. traveller, admin, host) to access tailored features and dashboards.</li>
+    </ul>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page-sheet page-break">
+    <ul class="cv-list" style="margin-top: 0; margin-bottom: 12pt;">
+      <li>Built with React and Vite for a fast, modern frontend experience with optimised build performance and smooth client-side routing.</li>
+      <li>Implemented dynamic destination browsing, booking-related workflows, and a clean, responsive UI suitable for both mobile and desktop users.</li>
+      <li><strong>Tech Stack:</strong> React, Vite, JavaScript, CSS, Vercel</li>
+    </ul>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section-title">CERTIFICATIONS</div>
+    <ul class="cv-list">
+      <li>Responsible AI: Applying AI Principles with Google Cloud – Google Cloud / Coursera</li>
+      <li>Introduction to Generative AI – Google Cloud / Coursera</li>
+      <li>Introduction to Generative AI Learning Path – Google Cloud / Coursera</li>
+      <li>Introduction to Large Language Models – Google Cloud / Coursera</li>
+    </ul>
+
+    <!-- ACHIEVEMENTS & EXTRACURRICULARS -->
+    <div class="section-title">ACHIEVEMENTS & EXTRACURRICULARS</div>
+    <ul class="cv-list">
+      <li>Maintaining a strong CGPA of 8.58 at Sister Nivedita University.</li>
+      <li>Successfully deployed 3 full-stack web projects with live demos on Vercel.</li>
+      <li>Completed 4 Google Cloud certifications focused on Responsible AI and Generative AI, demonstrating initiative beyond core curriculum.</li>
+      <li>Actively building personal projects to apply classroom knowledge to real-world development challenges.</li>
+    </ul>
+
+    <!-- LANGUAGES -->
+    <div class="section-title">LANGUAGES</div>
+    <p style="margin: 4pt 0 0; font-size: 10.2pt;">
+      Bengali (Native) &nbsp;|&nbsp; Hindi (Fluent) &nbsp;|&nbsp; English (Professional Proficiency)
+    </p>
+  </div>
+
+</body>
+</html>
