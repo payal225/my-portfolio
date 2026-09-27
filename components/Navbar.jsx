@@ -1,11 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FileText, Menu, X, Terminal } from 'lucide-react';
-import SoundToggle from './SoundToggle';
-import { soundEngine } from '../lib/soundEffects';
+import { FileText, Menu, X } from 'lucide-react';
 
-export default function Navbar({ onOpenCV, onOpenCmd }) {
+export default function Navbar({ onOpenCV }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -19,7 +17,6 @@ export default function Navbar({ onOpenCV, onOpenCmd }) {
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
-    soundEngine.playClick();
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
@@ -33,10 +30,8 @@ export default function Navbar({ onOpenCV, onOpenCmd }) {
         <a
           href="#"
           className="navbar-logo"
-          onMouseEnter={() => soundEngine.playHover()}
           onClick={(e) => {
             e.preventDefault();
-            soundEngine.playClick();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
@@ -46,71 +41,49 @@ export default function Navbar({ onOpenCV, onOpenCmd }) {
         <nav className={`navbar-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <a
             href="#about"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'about')}
           >
             About
           </a>
           <a
             href="#journey"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'journey')}
           >
             Journey
           </a>
           <a
             href="#skills"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'skills')}
           >
             Skills
           </a>
           <a
             href="#projects"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'projects')}
           >
             Projects
           </a>
           <a
             href="#designs"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'designs')}
           >
             Designs
           </a>
           <a
             href="#certifications"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'certifications')}
           >
             Certifications
           </a>
           <a
             href="#connect"
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={(e) => scrollToSection(e, 'connect')}
           >
             Connect
           </a>
 
           <button
-            onMouseEnter={() => soundEngine.playHover()}
             onClick={() => {
-              soundEngine.playClick();
-              if (onOpenCmd) onOpenCmd();
-            }}
-            className="nav-cmd-btn"
-            title="Quick Search & Actions (Ctrl + K)"
-          >
-            <span>Search</span>
-            <kbd className="cmd-kbd-badge">⌘K</kbd>
-          </button>
-
-          <button
-            onMouseEnter={() => soundEngine.playHover()}
-            onClick={() => {
-              soundEngine.playClick();
               setMobileMenuOpen(false);
               if (onOpenCV) onOpenCV();
             }}
@@ -120,14 +93,11 @@ export default function Navbar({ onOpenCV, onOpenCmd }) {
             <FileText size={14} />
             <span>View CV</span>
           </button>
-
-          <SoundToggle />
         </nav>
 
         <button
           className="mobile-menu-btn"
           onClick={() => {
-            soundEngine.playClick();
             setMobileMenuOpen(!mobileMenuOpen);
           }}
           aria-label="Toggle navigation menu"

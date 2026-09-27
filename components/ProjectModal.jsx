@@ -15,9 +15,9 @@ import {
   Zap,
   GitFork,
   Workflow,
+  ExternalLink,
 } from 'lucide-react';
 import { BrandGithub } from './BrandIcons';
-import { soundEngine } from '../lib/soundEffects';
 import ApiPlayground from './ApiPlayground';
 import SystemFlowDiagram from './SystemFlowDiagram';
 
@@ -27,7 +27,7 @@ const PROJECT_DETAILS = {
     title: 'HabitFlow — Daily Habit Tracker & Progress Analytics',
     tagline: 'React & Node.js • Daily Progress Rings • Streak Tracking',
     github: 'https://github.com/payal225/HabitFlow',
-    live: null,
+    live: 'https://habitflow-nu.vercel.app/',
     overview:
       'HabitFlow is a full-stack habit tracking web app designed to help people stay consistent with their daily goals. I built it with a clean dark-mode interface, instant completion feedback, and streak tracking that encourages everyday momentum without feeling like a chore.',
     architecture: [
@@ -64,7 +64,7 @@ const PROJECT_DETAILS = {
     title: 'TripNest — Travel Planning & Itinerary Platform',
     tagline: 'React & Vite • Multi-Day Itineraries • Role-Based Access',
     github: 'https://github.com/payal225/TripNest',
-    live: null,
+    live: 'https://trip-nest-sandy.vercel.app/',
     overview:
       'TripNest is a collaborative travel planning web app created to simplify group trips. It lets users organize multi-day itineraries, explore curated destinations, and keep track of accommodation details in one unified dashboard.',
     architecture: [
@@ -96,12 +96,12 @@ const PROJECT_DETAILS = {
     ],
     stack: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'REST API', 'JWT'],
   },
-  minierp: {
-    id: 'minierp',
+  erp: {
+    id: 'erp',
     title: 'Mini ERP — Business Operations & Employee Dashboard',
     tagline: 'Employee Records • Attendance & Payroll • Stock Management',
     github: 'https://github.com/payal225/mini-ERP-System',
-    live: null,
+    live: 'https://erp-delta-jet.vercel.app/',
     overview:
       'Mini ERP is a clean internal operations dashboard designed for small businesses. It simplifies team management by organizing employee records, attendance tracking, leave requests, and inventory levels in a clear, straightforward interface.',
     architecture: [
@@ -133,6 +133,131 @@ const PROJECT_DETAILS = {
     ],
     stack: ['React', 'Node.js', 'Express.js', 'MySQL', 'MongoDB', 'PDF Generation', 'REST API'],
   },
+  minierp: {
+    id: 'minierp',
+    title: 'Mini ERP — Business Operations & Employee Dashboard',
+    tagline: 'Employee Records • Attendance & Payroll • Stock Management',
+    github: 'https://github.com/payal225/mini-ERP-System',
+    live: 'https://erp-delta-jet.vercel.app/',
+    overview:
+      'Mini ERP is a clean internal operations dashboard designed for small businesses. It simplifies team management by organizing employee records, attendance tracking, leave requests, and inventory levels in a clear, straightforward interface.',
+    architecture: [
+      {
+        layer: 'Dashboard UI',
+        tech: 'React.js, Tabular Data Views, Modal Forms',
+        role: 'Clean administrative views for employee records, payroll calculation, and stock alert indicators.',
+      },
+      {
+        layer: 'Backend Controller',
+        tech: 'Node.js, Express.js, MySQL / MongoDB',
+        role: 'RESTful API endpoints for employee CRUD operations, attendance logging, and inventory counts.',
+      },
+      {
+        layer: 'Document & Reporting',
+        tech: 'PDF Generation Utilities',
+        role: 'Generates formatted payroll summaries and printable receipts directly from recorded order data.',
+      },
+      {
+        layer: 'Data Integrity',
+        tech: 'Relational / Document Schemas',
+        role: 'Maintains clean employee records with status flags, role permissions, and historical attendance logs.',
+      },
+    ],
+    challenges: [
+      'Clean Role Views: Designed permission checks so staff members see their own records while managers have full overview access.',
+      'Readable Data Tables: Structured high-density employee and stock tables with quick search and sorting.',
+      'PDF Export Workflow: Built a straightforward export flow for downloading printable attendance and payroll reports.',
+    ],
+    stack: ['React', 'Node.js', 'Express.js', 'MySQL', 'MongoDB', 'PDF Generation', 'REST API'],
+  },
+  hrms: {
+    id: 'hrms',
+    title: 'HRMS — Human Resource Management System',
+    tagline: 'Employee Profiles • Attendance Check-In • Role Permissions',
+    github: 'https://github.com/payal225/Human-resource-management-system',
+    live: null,
+    overview:
+      'An enterprise HR dashboard that registers employees, assigns departmental roles, logs attendance, and manages leave approvals without disjointed spreadsheets.',
+    architecture: [
+      {
+        layer: 'Frontend Interface',
+        tech: 'React.js, Modular CSS',
+        role: 'Clean administrative interfaces for attendance logs, role assignments, and department filters.',
+      },
+      {
+        layer: 'Backend & Controllers',
+        tech: 'Node.js, Express.js',
+        role: 'REST API endpoints handling employee CRUD, check-in timestamps, and departmental queries.',
+      },
+      {
+        layer: 'Database Layer',
+        tech: 'MongoDB, Mongoose',
+        role: 'Structured collections for personnel records, time tracking logs, and role-based permissions.',
+      },
+    ],
+    challenges: [
+      'Timestamp Accuracy: Ensuring reliable check-in and check-out attendance calculations across shifts.',
+      'Role Separation: Providing distinct views for HR managers versus individual employees.',
+    ],
+    stack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'REST API'],
+  },
+  'study-buddy': {
+    id: 'study-buddy',
+    title: 'SNU Study Buddy Finder',
+    tagline: 'Course-Based Collaboration • University Study Partner Matching',
+    github: 'https://github.com/payal225/snustudybuddyfinder',
+    live: null,
+    overview:
+      'A university collaboration tool created for Sister Nivedita University students to find study partners based on shared coursework, semester subjects, and matching availability schedules.',
+    architecture: [
+      {
+        layer: 'Frontend Interface',
+        tech: 'HTML5, CSS3, JavaScript',
+        role: 'Clean search interfaces for filtering courses, subjects, and study availability slots.',
+      },
+      {
+        layer: 'Backend Services',
+        tech: 'Node.js, Express.js',
+        role: 'Course matching algorithms and student profile index endpoints.',
+      },
+    ],
+    challenges: [
+      'Course Match Filtering: Designed quick query matching based on course codes and subject semesters.',
+      'Clean Lightweight UI: Kept dependencies minimal for ultra-fast university portal loading.',
+    ],
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express.js'],
+  },
+  'portfolio-3d': {
+    id: 'portfolio-3d',
+    title: 'Modern Software Engineering Portfolio',
+    tagline: 'Next.js 14 App Router • Modular React • Performance & Accessibility',
+    github: 'https://github.com/payal225/my-portfolio',
+    live: 'https://payalghosh.vercel.app/',
+    overview:
+      'A fast, accessible, and clean personal portfolio engineered with Next.js 14, modern vanilla CSS design tokens, interactive architectural case studies, and responsive mobile-first views.',
+    architecture: [
+      {
+        layer: 'Application Shell',
+        tech: 'Next.js 14 (App Router), React 18',
+        role: 'Static site generation (SSG) with optimized client hydration and sub-second load times.',
+      },
+      {
+        layer: 'Design System',
+        tech: 'Modern Vanilla CSS Tokens',
+        role: 'Modular tokenized styles, WCAG AA contrast compliance, and flexible responsive breakpoints.',
+      },
+      {
+        layer: 'Modals & Case Studies',
+        tech: 'React Portals & Modals',
+        role: 'Interactive architectural breakdown and API sandbox simulation.',
+      },
+    ],
+    challenges: [
+      'Production Performance: Cleaned up bloated micro-animations and heavy canvas loops to achieve zero layout shifts (CLS: 0).',
+      'Accessibility: Ensured high contrast ratios and keyboard-accessible modal closures.',
+    ],
+    stack: ['Next.js 14', 'React', 'CSS Tokens', 'Lucide Icons', 'Vercel'],
+  },
 };
 
 export default function ProjectModal({ projectId, onClose }) {
@@ -140,7 +265,6 @@ export default function ProjectModal({ projectId, onClose }) {
 
   useEffect(() => {
     if (projectId) {
-      soundEngine.playModalOpen();
       setActiveTab('overview');
     }
   }, [projectId]);
@@ -150,7 +274,6 @@ export default function ProjectModal({ projectId, onClose }) {
   const project = PROJECT_DETAILS[projectId];
 
   const handleTabChange = (tabKey) => {
-    soundEngine.playClick();
     setActiveTab(tabKey);
   };
 
@@ -168,8 +291,8 @@ export default function ProjectModal({ projectId, onClose }) {
           <div className="project-header-info">
             <div className="project-modal-tag-row">
               <span className="project-arch-badge">
-                <Terminal size={12} />
-                FULL-STACK PROJECT INSPECTOR
+                <Layers size={12} />
+                ENGINEERING CASE STUDY
               </span>
               <span className="project-id-badge">{project.id.toUpperCase()}</span>
             </div>
@@ -178,12 +301,9 @@ export default function ProjectModal({ projectId, onClose }) {
           </div>
 
           <button
-            onClick={() => {
-              soundEngine.playClick();
-              onClose();
-            }}
+            onClick={onClose}
             className="project-modal-close-btn"
-            aria-label="Close Project Inspector"
+            aria-label="Close Case Study"
           >
             <X size={18} />
           </button>
@@ -292,24 +412,33 @@ export default function ProjectModal({ projectId, onClose }) {
 
         {/* Footer Actions */}
         <div className="project-modal-footer">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="arch-action-btn primary"
-            onClick={() => soundEngine.playClick()}
-          >
-            <BrandGithub size={16} />
-            <span>Inspect GitHub Repository</span>
-          </a>
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="arch-action-btn primary"
+            >
+              <ExternalLink size={16} />
+              <span>Launch Live App</span>
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`arch-action-btn ${project.live ? 'secondary' : 'primary'}`}
+            >
+              <BrandGithub size={16} />
+              <span>View Source Code</span>
+            </a>
+          )}
           <button
-            onClick={() => {
-              soundEngine.playClick();
-              onClose();
-            }}
+            onClick={onClose}
             className="arch-action-btn secondary"
           >
-            <span>Close Inspector</span>
+            <span>Close</span>
           </button>
         </div>
       </div>

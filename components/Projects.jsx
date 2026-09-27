@@ -2,9 +2,8 @@
 
 import { portfolioData } from '../data/portfolioData';
 import CardTilt from './CardTilt';
-import { ExternalLink, CheckCircle2, Cpu, Terminal } from 'lucide-react';
+import { ExternalLink, CheckCircle2, Layers, BookOpen } from 'lucide-react';
 import { GithubIcon } from './BrandIcons';
-import { soundEngine } from '../lib/soundEffects';
 
 export default function Projects({ onOpenProject }) {
   const { projectsHeading, projects } = portfolioData;
@@ -20,6 +19,7 @@ export default function Projects({ onOpenProject }) {
       <div className="bento-projects-grid">
         {projects.map((project) => {
           const isFeatured = project.featured;
+          const hasLiveDemo = project.liveUrl && project.liveUrl !== '#';
 
           return (
             <CardTilt
@@ -33,13 +33,12 @@ export default function Projects({ onOpenProject }) {
                 <button
                   className="inspect-arch-badge-btn"
                   onClick={() => {
-                    soundEngine.playClick();
                     if (onOpenProject) onOpenProject(project.id);
                   }}
-                  title="Open System Architecture & Deep Dive Inspector"
+                  title="View Architectural Breakdown & Case Study"
                 >
-                  <Cpu size={12} color="#38bdf8" />
-                  <span>View Details</span>
+                  <BookOpen size={12} color="#38bdf8" />
+                  <span>Case Study</span>
                 </button>
               </div>
 
@@ -67,16 +66,28 @@ export default function Projects({ onOpenProject }) {
                 </ul>
 
                 <div className="bento-actions">
+                  {hasLiveDemo && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bento-btn bento-btn-primary"
+                      title={`Open live demo of ${project.title}`}
+                    >
+                      <ExternalLink size={14} />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
+
                   <button
                     onClick={() => {
-                      soundEngine.playClick();
                       if (onOpenProject) onOpenProject(project.id);
                     }}
-                    className="bento-btn bento-btn-primary"
-                    title="Inspect System Architecture, Schemas & Solutions"
+                    className={`bento-btn ${hasLiveDemo ? 'bento-btn-secondary' : 'bento-btn-primary'}`}
+                    title="View Architectural Breakdown & Case Study"
                   >
-                    <Terminal size={14} />
-                    <span>Inspect System</span>
+                    <Layers size={14} />
+                    <span>Case Study</span>
                   </button>
 
                   {project.githubUrl && (
@@ -85,11 +96,10 @@ export default function Projects({ onOpenProject }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bento-btn bento-btn-secondary"
-                      onMouseEnter={() => soundEngine.playHover()}
-                      onClick={() => soundEngine.playClick()}
+                      title={`View GitHub source code for ${project.title}`}
                     >
-                      <GithubIcon size={15} />
-                      <span>Repository</span>
+                      <GithubIcon size={14} />
+                      <span>Code</span>
                     </a>
                   )}
                 </div>

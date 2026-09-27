@@ -2,15 +2,14 @@
 
 import { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { ArrowDown, FileText, Send, Copy, Check, Sparkles, Terminal } from 'lucide-react';
-import { soundEngine } from '../lib/soundEffects';
+import { ArrowDown, FileText, Send, Copy, Check, ExternalLink } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from './BrandIcons';
 import { showToast } from '../lib/toastManager';
 
-export default function Hero({ onOpenCV, onOpenCmd }) {
+export default function Hero({ onOpenCV }) {
   const [copied, setCopied] = useState(false);
 
   const handleScrollToProjects = () => {
-    soundEngine.playClick();
     const projectsEl = document.getElementById('projects');
     if (projectsEl) {
       projectsEl.scrollIntoView({ behavior: 'smooth' });
@@ -19,7 +18,6 @@ export default function Hero({ onOpenCV, onOpenCmd }) {
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(portfolioData.email);
-    soundEngine.playSuccess();
     setCopied(true);
     showToast({
       title: 'Email Copied to Clipboard',
@@ -31,30 +29,41 @@ export default function Hero({ onOpenCV, onOpenCmd }) {
 
   return (
     <section className="overlay">
-      <div
-        className="hero-status-pill"
-        onMouseEnter={() => soundEngine.playHover()}
-      >
+      <div className="hero-status-pill">
         <span className="status-indicator-ring">
           <span className="status-indicator-dot"></span>
         </span>
         <span>{portfolioData.status}</span>
       </div>
 
-      <h1 className="hero-title">
-        {portfolioData.headline}{' '}
-        <span className="hero-gradient-name">{portfolioData.name}</span>
-      </h1>
+      <div className="hero-content-wrapper">
+        <div className="hero-text-block">
+          <div className="hero-greeting-line">
+            <span>Hi, I'm</span>
+          </div>
+          <h1 className="hero-name-heading">{portfolioData.name}</h1>
+          <h2 className="hero-role-title">{portfolioData.role}</h2>
+          <p className="hero-bio-lead">
+            B.Tech Computer Science student at <strong>Sister Nivedita University (8.58 CGPA)</strong>. 
+            Specializing in <strong>React, Node.js, Express</strong>, and database architectures (<strong>MySQL, MongoDB</strong>). 
+            Focused on building robust full-stack applications with clean code and real-world utility.
+          </p>
+        </div>
 
-      <p className="hero-role">{portfolioData.role}</p>
-      <p className="hero-bio">{portfolioData.bio}</p>
+        <div className="hero-avatar-container">
+          <img 
+            src="/avatar.jpg" 
+            alt="Payal Ghosh" 
+            className="hero-avatar-img"
+          />
+        </div>
+      </div>
 
       <div className="hero-highlights">
         {portfolioData.highlights.map((highlight, index) => (
           <span
             key={index}
             className="highlight-pill"
-            onMouseEnter={() => soundEngine.playHover()}
           >
             {highlight}
           </span>
@@ -63,22 +72,10 @@ export default function Hero({ onOpenCV, onOpenCmd }) {
 
       <div className="hero-actions">
         <button
-          id="explore-projects-btn"
-          onMouseEnter={() => soundEngine.playHover()}
-          onClick={handleScrollToProjects}
-          className="btn-hero-primary"
-        >
-          <span>Explore Projects</span>
-          <ArrowDown size={16} />
-        </button>
-
-        <button
-          onMouseEnter={() => soundEngine.playHover()}
           onClick={() => {
-            soundEngine.playClick();
             if (onOpenCV) onOpenCV();
           }}
-          className="btn-hero-resume"
+          className="btn-hero-primary"
           title="View Official 1:1 Curriculum Vitae"
         >
           <FileText size={16} />
@@ -86,35 +83,39 @@ export default function Hero({ onOpenCV, onOpenCmd }) {
         </button>
 
         <button
-          onMouseEnter={() => soundEngine.playHover()}
-          onClick={() => {
-            soundEngine.playClick();
-            if (onOpenCmd) onOpenCmd();
-          }}
-          className="btn-hero-ghost"
-          title="Open Quick Search (Ctrl + K)"
+          id="explore-projects-btn"
+          onClick={handleScrollToProjects}
+          className="btn-hero-resume"
         >
-          <Terminal size={14} />
-          <span>Quick Actions</span>
-          <kbd className="hero-kbd-pill">⌘K</kbd>
+          <span>Explore Projects</span>
+          <ArrowDown size={16} />
         </button>
 
         <a
-          href="#connect"
-          onMouseEnter={() => soundEngine.playHover()}
-          onClick={(e) => {
-            e.preventDefault();
-            soundEngine.playClick();
-            document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          className="btn-hero-secondary"
+          href="https://github.com/payal225"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-hero-social"
+          title="GitHub Profile"
         >
-          <span>Say Hello</span>
-          <Send size={14} style={{ marginLeft: '4px' }} />
+          <GithubIcon size={16} />
+          <span>GitHub</span>
+          <ExternalLink size={12} style={{ opacity: 0.6 }} />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/payal-ghosh-1a7345359"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-hero-social"
+          title="LinkedIn Profile"
+        >
+          <LinkedinIcon size={16} />
+          <span>LinkedIn</span>
+          <ExternalLink size={12} style={{ opacity: 0.6 }} />
         </a>
 
         <button
-          onMouseEnter={() => soundEngine.playHover()}
           onClick={handleCopyEmail}
           className="btn-hero-ghost"
           title="Copy Email Address"
@@ -131,6 +132,18 @@ export default function Hero({ onOpenCV, onOpenCmd }) {
             </span>
           )}
         </button>
+
+        <a
+          href="#connect"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="btn-hero-secondary"
+        >
+          <span>Get in Touch</span>
+          <Send size={14} style={{ marginLeft: '4px' }} />
+        </a>
       </div>
     </section>
   );

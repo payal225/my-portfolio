@@ -296,21 +296,22 @@ export const portfolioData = {
       id: "portfolio-3d",
       year: "2026",
       featured: false,
-      tag: "Personal Portfolio & Creative Studio",
+      tag: "Personal Portfolio & Architecture",
       title: "This Portfolio",
-      description: "The site you're looking at right now. Built with Next.js, has floating galaxy particles in the background, 3D card tilt effects, and a vinyl music player because why not.",
+      description: "Clean, performant developer portfolio built with Next.js App Router, modular React architecture, and accessible dark-mode UI with interactive case studies.",
       features: [
-        "Three.js particle canvas with galaxy effect and cursor tracking",
-        "Cards that tilt in 3D when you hover — with a spotlight that follows your mouse",
-        "CV modal, downloadable resume, and a section for my art and designs"
+        "Modular Next.js 14 App Router architecture with client-side state encapsulation",
+        "Interactive system architecture deep-dives and live API playground modals",
+        "Accessible WCAG-compliant dark theme with responsive mobile layout and 1:1 CV viewer"
       ],
       stack: [
-        "Next.js",
+        "Next.js 14",
         "React",
-        "Three.js",
-        "Vanilla CSS"
+        "Modular CSS",
+        "Lucide Icons",
+        "Vercel"
       ],
-      liveUrl: "#",
+      liveUrl: "https://payalghosh.vercel.app/",
       githubUrl: "https://github.com/payal225/my-portfolio"
     },
     {

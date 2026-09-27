@@ -2,7 +2,6 @@
 
 import { portfolioData } from '../data/portfolioData';
 import CardTilt from './CardTilt';
-import SkillsRadar from './SkillsRadar';
 import { Code2, Layout, Server, Wrench, ExternalLink } from 'lucide-react';
 import { soundEngine } from '../lib/soundEffects';
 
@@ -23,9 +22,6 @@ export default function Skills() {
         <h2 className="section-title-glow">{skillsHeading.title}</h2>
         <p className="section-copy">{skillsHeading.description}</p>
       </div>
-
-      {/* Interactive Competency Radar */}
-      <SkillsRadar />
 
       {/* Categorized Skills Bento Grid */}
       <div className="bento-skills-grid">

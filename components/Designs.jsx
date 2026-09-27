@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import CardTilt from './CardTilt';
-import BlenderStudio from './BlenderStudio';
 import { Layout, Maximize2, Sparkles, Layers, Palette, Box, Paintbrush, ExternalLink } from 'lucide-react';
 import { soundEngine } from '../lib/soundEffects';
 
@@ -11,13 +10,12 @@ export default function Designs({ onSelectDesign }) {
   const { designsHeading, designs } = portfolioData;
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Digital Art', '3D Blender Models', 'Mobile App UI', 'Web Dashboards', 'Design Systems'];
+  const categories = ['All', 'Digital Art', 'Mobile App UI', 'Web Dashboards', 'Design Systems'];
 
   const filteredDesigns = activeCategory === 'All'
     ? designs
     : designs.filter((d) => d.category === activeCategory);
 
-  const show3DStudio = activeCategory === 'All' || activeCategory === '3D Blender Models';
 
   return (
     <section className="designs-section" id="designs">
@@ -41,7 +39,7 @@ export default function Designs({ onSelectDesign }) {
           >
             {cat === 'All' && <Layers size={13} />}
             {cat === 'Digital Art' && <Paintbrush size={13} color="#ec4899" />}
-            {cat === '3D Blender Models' && <Box size={13} color="#38bdf8" />}
+
             {cat === 'Mobile App UI' && <Layout size={13} />}
             {cat === 'Web Dashboards' && <Sparkles size={13} />}
             {cat === 'Design Systems' && <Palette size={13} />}
@@ -50,15 +48,7 @@ export default function Designs({ onSelectDesign }) {
         ))}
       </div>
 
-      {/* Interactive 3D Blender Studio Viewport */}
-      {show3DStudio && (
-        <div className="blender-studio-wrapper">
-          <BlenderStudio />
-        </div>
-      )}
-
-      {/* 2D Designs Bento Grid (shown when not solely viewing 3D models) */}
-      {activeCategory !== '3D Blender Models' && (
+      {/* 2D Designs Bento Grid */}
         <div className="designs-bento-grid">
           {filteredDesigns.map((design) => (
             <CardTilt
@@ -147,7 +137,6 @@ export default function Designs({ onSelectDesign }) {
             </CardTilt>
           ))}
         </div>
-      )}
     </section>
   );
 }
